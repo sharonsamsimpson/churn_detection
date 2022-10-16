@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>  
+</head>
+
+<body>
+    
+    <div>
+        <Marquee height="30%" border="5%" width="100%" direction="right"><h1> Churn or not !!!</h1></Marquee>
+        <h1>KNOW IT !!!</h1>
+        <h2>Go...</h2>
+        <br>
+        <form action="{{ url_for('rchurn')}}" method="POST">     
+            <button id="churn" type="submit">Churn Detection</button>
+        </form>        
+    </div>
+
+</body>
+</html>

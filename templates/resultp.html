@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+</head>
+
+<body>
+    <h1>Churn or not !!!</h1>
+    <div>
+        <h2>Churn Detection</h2>
+        <br>
+        
+        <form action="{{ url_for('churn')}}" method="POST">
+         
+            <h4>Enter your credit_score</h4>
+            <input type="number" name="credit_score" placeholder="credit_score">
+            <br>
+            
+            <h4>Enter your country</h4>
+            <select name="country" id="country">
+                <option value=0>France</option>
+                <option value=1>Germany</option>
+                <option value=2>Spain</option>
+            </select>  
+            <br>
+            
+            <h4>Enter your gender</h4>
+            <select name="gender" id="gender">
+                <option value=0>Female</option>
+                <option value=1>Male</option>
+            </select>          
+            <br>           
+            
+            <h4>Enter your age</h4>
+            <input type="number" name="age" placeholder="age">
+            <br>
+            
+            <h4>Enter your tenure</h4>
+            <select name="tenure" id="tenure">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>               
+            </select>           
+            <br>
+            
+            <h4>Enter your balance</h4>
+            <input type="float" name="balance" placeholder="balance">
+            <br>
+            
+            <h4>Enter your products_number</h4>
+            <select name="products_number" id="products_number">
+                <option value=0>0</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>             
+            </select>                 
+            <br>
+            
+            <h4>Enter your credit_card</h4>
+            <select name="credit_card" id="credit_card">
+                <option value=0>0</option>
+                <option value=1>1</option>                    
+            </select>        
+            <br>
+            
+            <h4>Enter your active_member</h4>
+            <select name="active_member" id="active_member">
+                <option value=0>0</option>
+                <option value=1>1</option>           
+            </select>        
+            <br>
+            
+            <h4>Enter your estimated_salary</h4>
+            <input type="float" name="estimated_salary" placeholder="estimated_salary">
+            <br>
+            
+            <button type="submit">Predict</button>
+        </form>
+        <br>
+        {{ prediction_text }}
+    </div>
+</body>
+</html>
